@@ -34,7 +34,11 @@ def create():
 
 @app.route("/view/<link_id>")
 def view(link_id):
-    return flask.render_template('view.html', link_id=link_id, url=links[link_id])
+    if app.config["DEBUG"]:
+        short_url=flask.url_for("visit", link_id=link_id, _external=True)
+    else:
+        short_url="https://tilde.za3k.com" + flask.url_for("visit", link_id=link_id)
+    return flask.render_template('view.html', short_url=short_url, long_url=links[link_id])
 
 @app.route("/<link_id>")
 def visit(link_id):
