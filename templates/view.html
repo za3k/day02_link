@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h3>{% block title %}Short Link{% endblock %}</h3>
+{% endblock %}
+
+{% block content %}
+    <div class="link">
+        <button onclick="navigator.clipboard.writeText('{{ url_for('visit', link_id=link_id, _external=True) }}')" class="btn btn-primary">Copy Link</button>
+        <div>
+            <a href="{{ url_for("visit", link_id=link_id, _external=True) }}" class="short-url">{{ url_for("visit", link_id=link_id, _external=True) }}</a>
+            <span class="long-url">{{ url }}</span>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+/* -- This specific Hack-A-Day project -- */
+
+form.link-create {
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.link {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 15px;
+    /*min-height: 300px;*/
+    margin: 10px 0 30px 0;
+    border: 2px solid black;
+}
+
+.link .btn {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+.short-url {
+    font-weight: bold;
+    font-size: x-large;
+    display: block;
+}
+
+.long-url {
+    font-style: italic;
+    display: block;
+}
+
+/* -- All Hack-A-Day projects -- */
+.about {
+    white-space: pre-wrap;
+}
+.footer {
+    background-color: rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+.footer ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.navbar-brand-link a {
+    color: #777;
+}
+.navbar-brand-link a:hover {
+    color: #000;
+    text-decoration: none;
+}
