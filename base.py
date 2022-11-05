@@ -121,6 +121,9 @@ def load_info(new_info):
         info["subdir"]=""
     else:
         app.config["APPLICATION_ROOT"]=info["subdir"]
+        app.config["SERVER_NAME"]="tilde.za3k.com"
+        app.config["PREFERRED_URL_SCHEME"]="https"
+
 @app.context_processor
 def inject_dict_for_all_templates():
     return info
